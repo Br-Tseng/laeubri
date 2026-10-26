@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BRUUU Discord 實用工具機器人：計算算式、查詢台灣時間與城市天氣。查看服務條款與隱私權政策。">
+  <meta name="theme-color" content="#030712">
+  <title>BRUUU — 服務條款與隱私權政策</title>
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <div class="glow-sphere glow-sphere-1" aria-hidden="true"></div>
+  <div class="glow-sphere glow-sphere-2" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="logo-section" href="#top" aria-label="BRUUU 回到頁首">
+      <img src="logo.svg" alt="" class="logo-img" width="42" height="42">
+      <span class="brand-name">BRUUU</span>
+    </a>
+    <nav class="nav-links" aria-label="頁內導覽">
+      <a href="#tos" data-nav="tos">服務條款</a>
+      <a href="#privacy" data-nav="privacy">隱私權政策</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="heroTitle">
+      <p class="hero-eyebrow">BRUUU · DISCORD UTILITY BOT</p>
+      <h1 id="heroTitle">日常小事，交給 BRUUU。</h1>
+      <p>計算算式、掌握台灣時間、查詢城市天氣。<br>簡單實用的 Discord 小幫手，也讓服務規範與資料使用清楚透明。</p>
+      <ul class="command-list" aria-label="支援的指令">
+        <li><code>/calc</code> 數學計算</li>
+        <li><code>/time</code> 台灣時間</li>
+        <li><code>/weather</code> 城市天氣</li>
+        <li><code>/help</code> 指令說明</li>
+      </ul>
+    </section>
+
+    <section class="quick-tool-card" aria-labelledby="linksTitle">
+      <h2 id="linksTitle">條款與政策連結</h2>
+      <p class="tool-desc">部署至 GitHub Pages 後，可複製本頁連結，填入 Discord Developer Portal 的 Terms of Service URL 與 Privacy Policy URL 欄位。</p>
+      <div class="terminal-container">
+        <div class="terminal-label">服務條款 · Terms of Service URL</div>
+        <div class="terminal-box" id="tosBox">
+          <div class="terminal-content">
+            <span class="terminal-prompt" aria-hidden="true">$</span>
+            <span id="tosUrlText">部署後開啟網站，即可取得網址。</span>
+          </div>
+          <button class="terminal-copy-btn" type="button" data-target="tosUrlText" data-box="tosBox" aria-label="複製服務條款網址" disabled>
+            <span class="btn-label">複製</span>
+          </button>
+        </div>
+      </div>
+      <div class="terminal-container">
+        <div class="terminal-label">隱私權政策 · Privacy Policy URL</div>
+        <div class="terminal-box" id="privacyBox">
+          <div class="terminal-content">
+            <span class="terminal-prompt" aria-hidden="true">$</span>
+            <span id="privacyUrlText">部署後開啟網站，即可取得網址。</span>
+          </div>
+          <button class="terminal-copy-btn" type="button" data-target="privacyUrlText" data-box="privacyBox" aria-label="複製隱私權政策網址" disabled>
+            <span class="btn-label">複製</span>
+          </button>
+        </div>
+      </div>
+      <noscript><p class="tool-desc">自動複製需要 JavaScript；你仍可閱讀全文，並在瀏覽器網址後加上 #tos 或 #privacy 取得章節連結。</p></noscript>
+      <a href="#contact" class="discord-community-link">聯絡與資料請求 <span aria-hidden="true">→</span></a>
+    </section>
+
+    <section id="tos" class="doc-section" aria-labelledby="tosTitle">
+      <div class="doc-header">
+        <h2 id="tosTitle">服務條款 (Terms of Service)</h2>
+        <div class="doc-meta">最後更新日期：<time datetime="2026-10-26">2026 年 10 月 26 日</time></div>
+      </div>
+      <div class="doc-body">
+        <h3>1. 適用範圍與服務內容</h3>
+        <p>本條款適用於 BRUUU Discord 機器人（以下稱「本服務」）。本服務提供 <code>/calc</code> 數學算式計算、<code>/time</code> 台灣時間、<code>/weather</code> 城市天氣查詢與 <code>/help</code> 指令說明。使用本服務前，請閱讀本條款與隱私權政策；若不同意，請停止使用，伺服器管理員可將機器人移除。</p>
+        <h3>2. 使用規範</h3>
+        <ul>
+          <li>使用者須遵守適用法律、<a href="https://discord.com/terms" target="_blank" rel="noopener noreferrer">Discord 服務條款</a>與<a href="https://discord.com/guidelines" target="_blank" rel="noopener noreferrer">社群守則</a>。</li>
+          <li>不得利用本服務洗頻、騷擾他人、侵犯隱私，或透過大量請求、惡意輸入等方式干擾服務運作。</li>
+          <li>請只輸入執行指令所需的資料，不要提交密碼、Token、個人地址或其他敏感資訊。</li>
+          <li>伺服器管理員應妥善設定指令權限。為處理濫用或維護服務，維護者得限制或停止提供服務。</li>
+        </ul>
+        <h3>3. 資料準確性與可用性</h3>
+        <p>本服務依現況提供，可能因維護、網路、Discord 或第三方服務異常而中斷。計算結果僅供參考，重要用途請另行核對；時間查詢採 Asia/Taipei 時區。天氣資料來自 <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a>，可能有延遲或地點辨識差異，不應作為緊急應變或安全決策的唯一依據。</p>
+        <p>在適用法律允許的範圍內，維護者不保證服務不中斷、完全無誤或適合特定用途；本條款不排除依法不得排除的責任或使用者權利。</p>
+        <h3>4. 服務調整與條款更新</h3>
+        <p>功能可能因維護或外部服務變更而調整或停止。條款更新將刊登於本頁並標示更新日期；若不同意更新內容，請停止使用本服務。</p>
+      </div>
+    </section>
+
+    <section id="privacy" class="doc-section" aria-labelledby="privacyTitle">
+      <div class="doc-header">
+        <h2 id="privacyTitle">隱私權政策 (Privacy Policy)</h2>
+        <div class="doc-meta">最後更新日期：<time datetime="2026-10-26">2026 年 10 月 26 日</time></div>
+      </div>
+      <div class="doc-body">
+        <h3>1. 執行指令時處理的資料</h3>
+        <p>使用斜線指令時，Discord 會向本服務傳送互動事件，其中可能包含使用者、伺服器、頻道等識別資訊，以及回覆互動所需的資料。本服務依指令處理以下輸入：</p>
+        <ul>
+          <li><strong>數學計算：</strong>處理你輸入的算式，以產生計算結果。</li>
+          <li><strong>天氣查詢：</strong>處理你輸入的城市名稱，取得城市座標後查詢天氣；不會存取裝置 GPS 定位。</li>
+          <li><strong>時間與說明：</strong>產生台灣目前時間或指令清單，無須提供額外個人資料。</li>
+        </ul>
+        <p>目前版本僅啟用 Discord 的 Guilds Gateway Intent，未啟用 Message Content Intent，也未實作一般聊天訊息的監聽或儲存。成功的指令回覆可能顯示於使用指令的頻道，請留意其他成員可能看到你的輸入與結果。</p>
+        <h3>2. 儲存與紀錄</h3>
+        <p>目前機器人在維護者的個人電腦上運行，未建立使用者資料庫，也未主動將指令歷史寫入檔案；執行所需資料會在記憶體中處理。程式會在終端機輸出啟動與錯誤紀錄，錯誤內容可能包含請求相關資訊。維護者目前未另存日誌；終端機中仍可能保留當次執行的輸出，因此不能據此保證完全沒有紀錄。若日後改用主機平台或調整紀錄保存方式，將更新本政策。</p>
+        <h3>3. 第三方服務與資料傳送</h3>
+        <ul>
+          <li><strong>Discord：</strong>提供指令互動與訊息傳送，相關資料亦受 <a href="https://discord.com/privacy" target="_blank" rel="noopener noreferrer">Discord 隱私權政策</a>規範。</li>
+          <li><strong>Open-Meteo：</strong>天氣查詢會將城市名稱傳送至其地理編碼 API，再將查得的座標傳送至天氣 API。程式不會刻意將 Discord 使用者、伺服器或頻道 ID 附加到這些請求；API 服務仍會接收連線所需的技術資訊。詳見 <a href="https://open-meteo.com/en/terms" target="_blank" rel="noopener noreferrer">Open-Meteo 條款與隱私資訊</a>。</li>
+          <li><strong>網站託管與聯絡：</strong>本頁使用 GitHub Pages 託管，並透過 GitHub Issues 接收聯絡與資料請求。GitHub 可能處理 IP 位址、帳號及提交內容等資訊，詳見 <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub 隱私權聲明</a>。Issues 內容為公開資訊，請勿在其中提交個人資料或秘密資訊。</li>
+        </ul>
+        <p>本頁未加入分析追蹤、廣告、Cookie 或瀏覽器本機儲存，也不會從外部載入字型。複製按鈕僅在你點擊時將對應網址寫入剪貼簿，不會讀取剪貼簿內容。</p>
+        <h3>4. 停止使用與資料刪除</h3>
+        <p>你可以隨時停止使用指令；管理員可移除機器人，停止其後續在該伺服器提供服務。移除機器人不會自動刪除 Discord 上既有的訊息或主機可能保存的紀錄。Discord 訊息請透過 Discord 功能或伺服器管理員處理；如需詢問維護者持有的資料或提出刪除請求，請參閱下方聯絡資訊。可刪除範圍與處理方式須依實際持有資料及必要的身分核對確認。</p>
+        <h3>5. 政策更新</h3>
+        <p>若功能或資料處理方式變更，將同步更新本頁及更新日期。</p>
+      </div>
+    </section>
+
+    <section id="contact" class="doc-section" aria-labelledby="contactTitle">
+      <div class="doc-header">
+        <h2 id="contactTitle">聯絡與資料請求</h2>
+      </div>
+      <div class="doc-body">
+        <p>如有服務問題、隱私疑問或資料刪除請求，請透過 <a href="https://github.com/Br-Tseng/laeubri/issues/new" target="_blank" rel="noopener noreferrer">BRUUU GitHub Issues</a> 聯絡維護者（提交需登入 GitHub 帳號）。</p>
+        <p class="publication-note"><strong>Issues 會公開顯示：</strong>請先僅描述請求類型，不要張貼使用者或伺服器 ID、對話紀錄、電子郵件、密碼或機器人 Token。若需身分核對或其他資料，請先與維護者確認適當的非公開處理方式，再提供必要資訊。</p>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toastMessage" role="status" aria-live="polite">
+    <span id="toastText"></span>
+  </div>
+
+  <footer class="sleek-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo-group">
+          <img src="logo.svg" alt="" class="footer-logo" width="32" height="32">
+          <span class="footer-brand-name">BRUUU</span>
+        </div>
+        <p class="footer-slogan">讓 Discord 日常更簡單。<br>計算 · 時間 · 天氣</p>
+      </div>
+      <nav class="footer-links-container" aria-label="頁尾連結">
+        <a href="#tos" class="footer-link">服務條款</a>
+        <a href="#privacy" class="footer-link">隱私權政策</a>
+        <a href="#contact" class="footer-link">聯絡</a>
+        <a href="https://github.com/Br-Tseng/laeubri" class="footer-link" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </nav>
+      <div class="footer-right">
+        <span class="copyright-text">BRUUU © 2026</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
